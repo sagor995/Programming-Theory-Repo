@@ -18,6 +18,7 @@ public abstract class PlayerController : MonoBehaviour
     [SerializeField] protected List<WheelCollider> allWheels;
     protected int wheelsOnGround = 0;
 
+    // ENCAPSULATION
     protected float HorsePower
     {
         get { return _horsePower; }
@@ -26,6 +27,7 @@ public abstract class PlayerController : MonoBehaviour
 
     protected abstract void Move(float horizontalInput, float verticalInput);
 
+    // ABSTRACTION
     protected void UpdateSpeedAndRPM()
     {
         speed = Mathf.RoundToInt(playerRB.velocity.magnitude * 2.237f);

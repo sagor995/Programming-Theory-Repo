@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Car : PlayerController
 {
     private float horizontalInput;
@@ -26,6 +27,7 @@ public class Car : PlayerController
         }
     }
 
+    // POLYMORPHISM
     protected override void Move(float horizontalInput, float verticalInput)
     {
         playerRB.AddRelativeForce(Vector3.forward * HorsePower * verticalInput);
