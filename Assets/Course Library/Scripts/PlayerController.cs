@@ -14,6 +14,7 @@ public abstract class PlayerController : MonoBehaviour
     [SerializeField] protected GameObject centerOfMass;
     [SerializeField] protected TextMeshProUGUI speedometerText;
     [SerializeField] protected TextMeshProUGUI RPMText;
+    [SerializeField] protected TextMeshProUGUI UserName;
     [SerializeField] protected List<WheelCollider> allWheels;
     protected int wheelsOnGround = 0;
 
@@ -32,6 +33,8 @@ public abstract class PlayerController : MonoBehaviour
 
         rpm = Mathf.Round((speed % 30) * 40);
         RPMText.SetText("RPM: " + rpm);
+
+        UserName.SetText("User: "+GameManager.instance.userName);
     }
 
 
